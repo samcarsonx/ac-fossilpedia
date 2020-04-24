@@ -6,7 +6,7 @@ $checkboxes.on("change", function(){
     checkboxValues[this.id] = this.checked;
   });
 
-  localStorage.setItem("checkboxValues", JSON.stringify(checkboxValues));
+  window.localStorage.setItem("checkboxValues", JSON.stringify(checkboxValues));
 });
 
 // On page load
