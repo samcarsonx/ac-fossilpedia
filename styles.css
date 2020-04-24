@@ -1,4 +1,1 @@
-tbody td:nth-of-type(odd),
-thead th:nth-of-type(even){
-  background:rgba(200,200,200,0.1);
-}
+tbody td:nth-of-type(odd),thead th:nth-of-type(even){background:rgba(200,200,200,.1)}
