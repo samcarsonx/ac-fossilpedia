@@ -50,15 +50,28 @@ input {
   align: center;
 }
 
-a:link {
+a.about:link {
   color: lightgray;
 }
-a:visited {
+a.about:visited {
   color: lightgray;
 }
-a:hover {
+a.about:hover {
   color: lightgray;
 }
-a:active {
+a.about:active {
   color: lightgray;
+}
+
+a.titlelink:link {
+  color: #4c4409;
+}
+a.titlelink:visited {
+  color: #4c4409;
+}
+a.titlelink:hover {
+  color: #4c4409;
+}
+a.titlelink:active {
+  color: #4c4409;
 }
