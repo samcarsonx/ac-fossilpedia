@@ -14,6 +14,8 @@
     <meta property="twitter:title" content="New Horizons Fossilpedia">
     <meta property="twitter:description" content="An open-source fossil tracker by Sam Carson.">
 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
     <script
       src="https://code.jquery.com/jquery-3.5.0.min.js"
       integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
@@ -26,7 +28,15 @@
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+
+    <script>
+      document.write('<style>body { visibility: hidden; }</style>');
+      $(window).on("load", function() {
+        $("body").css("visibility","visible");
+      });
+    </script>
+
+    <script type="text/javascript" charset="UTF-8" src="script.js"></script>
 
     <link rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -46,40 +56,71 @@
         <span class="title finkfont">New Horizons Fossilpedia</span>   <span style="color: #6e661b;">Ein <a class="titlelink" href="https://github.com/samcarsonx/ac-fossilpedia">open-source</a> Fossilien Tracker von <a class="titlelink" href="https://github.com/samcarsonx">Sam Carson</a>.</span>
       </span>
       <div class="jumbotron">
-        <div class="row">
-          <div class="col-8">
-            <select id="lang" class="form-control btn-light" style="border-radius: 15px;">
-              <option value="en">English</option>
-              <option value="de">Deutsch</option>
-            </select>
-          </div>
-          <div class="col-4">
-            <button class="resetBtn btn btn-light" onclick="resetDialogue();">Reset Data</button>
-          </div>
-        </div>
-        <br>
+
         <table class="table table-sm table-borderless" style="border-width: 10px;">
           <thead>
             <tr>
               <th scope="col"></th>
-              <th scope="col">Standalone</th>
-              <th scope="col">Skull</th>
-              <th scope="col">Neck</th>
-              <th scope="col">Torso</th>
-              <th scope="col">Chest</th>
-              <th scope="col">Pelvis</th>
-              <th scope="col">Body</th>
-              <th scope="col">Tail</th>
-              <th scope="col">Tail Tip</th>
-              <th scope="col">Left Side</th>
-              <th scope="col">Right Side</th>
-              <th scope="col">Left Wing</th>
-              <th scope="col">Right Wing</th>
+              <th scope="col">
+                <span class="en">Standalone</span>
+                <span class="de">Eigenständige</span>
+              </th>
+              <th scope="col">
+                <span class="en">Skull</span>
+                <span class="de">Schädel/Hinterteil</span>
+              </th>
+              <th scope="col">
+                <span class="en">Neck</span>
+                <span class="de">Hals</span>
+              </th>
+              <th scope="col">
+                <span class="en">Torso</span>
+                <span class="de">Torso</span>
+              </th>
+              <th scope="col">
+                <span class="en">Chest</span>
+                <span class="de">Thorax</span>
+              </th>
+              <th scope="col">
+                <span class="en">Pelvis</span>
+                <span class="de">Becken</span>
+              </th>
+              <th scope="col">
+                <span class="en">Body</span>
+                <span class="de">Körper</span>
+              </th>
+              <th scope="col">
+                <span class="en">Tail</span>
+                <span class="de">Schwanz/Vorderteil</span>
+              </th>
+              <th scope="col">
+                <span class="en">Tail Tip</span>
+                <span class="de">Schwanzspitze</span>
+              </th>
+              <th scope="col">
+                <span class="en">Left Side</span>
+                <span class="de">Hälfte (L)</span>
+              </th>
+              <th scope="col">
+                <span class="en">Right Side</span>
+                <span class="de">Hälfte (R)</span>
+              </th>
+              <th scope="col">
+                <span class="en">Left Wing</span>
+                <span class="de">Flügel (L)</span>
+              </th>
+              <th scope="col">
+                <span class="en">Right Wing</span>
+                <span class="de">Flügel (R)</span>
+              </th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">Acanthostega</th>
+              <th scope="row">
+                <span class="en">Acanthostega</span>
+                <span class="de">Acanthostega</span>
+              </th>
               <td><input type="checkbox" id="acanthStandalone"></td>
               <td></td>
               <td></td>
@@ -95,7 +136,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Amber</th>
+              <th scope="row">
+                <span class="en">Amber</span>
+                <span class="de">Bernstein</span>
+              </th>
               <td><input type="checkbox" id="amberStandalone"></td>
               <td></td>
               <td></td>
@@ -111,7 +155,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Ammonite</th>
+              <th scope="row">
+                <span class="en">Ammonite</span>
+                <span class="de">Ammonit</span>
+              </th>
               <td><input type="checkbox" id="ammonStandalone"></td>
               <td></td>
               <td></td>
@@ -127,7 +174,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Ankylo</th>
+              <th scope="row">
+                <span class="en">Ankylo</span>
+                <span class="de">Ankylosaurus</span>
+              </th>
               <td></td>
               <td><input type="checkbox" id="ankyloSkull"></td>
               <td></td>
@@ -143,7 +193,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Anomalocarys</th>
+              <th scope="row">
+                <span class="en">Anomalocarys</span>
+                <span class="de">Anomalocarys</span>
+              </th>
               <td><input type="checkbox" id="anomaStandalone"></td>
               <td></td>
               <td></td>
@@ -159,7 +212,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Archaeopteryx</th>
+              <th scope="row">
+                <span class="en">Archaeopteryx</span>
+                <span class="de">Archaeopteryx</span>
+              </th>
               <td><input type="checkbox" id="archaeoStandalone"></td>
               <td></td>
               <td></td>
@@ -175,7 +231,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Archelon</th>
+              <th scope="row">
+                <span class="en">Archelon</span>
+                <span class="de">Archelon</span>
+              </th>
               <td></td>
               <td><input type="checkbox" id="archelonSkull"></td>
               <td></td>
@@ -191,7 +250,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Australopith</th>
+              <th scope="row">
+                <span class="en">Australopith</span>
+                <span class="de">Australopithecus</span>
+              </th>
               <td><input type="checkbox" id="austraStandalone"></td>
               <td></td>
               <td></td>
@@ -207,7 +269,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Brachio</th>
+              <th scope="row">
+                <span class="en">Brachio</span>
+                <span class="de">Brachiosaurus</span>
+              </th>
               <td></td>
               <td><input type="checkbox" id="brachioSkull"></td>
               <td></td>
@@ -223,7 +288,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Coprolite</th>
+              <th scope="row">
+                <span class="en">Coprolite</span>
+                <span class="de">Koprolith</span>
+              </th>
               <td><input type="checkbox" id="coproStandalone"></td>
               <td></td>
               <td></td>
@@ -239,7 +307,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Deinony</th>
+              <th scope="row">
+                <span class="en">Deinony</span>
+                <span class="de">Deinonychus</span>
+              </th>
               <td></td>
               <td></td>
               <td></td>
@@ -255,7 +326,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Dimetrodon</th>
+              <th scope="row">
+                <span class="en">Dimetrodon</span>
+                <span class="de">Dimetrodon</span>
+              </th>
               <td></td>
               <td><input type="checkbox" id="dimetroSkull"></td>
               <td></td>
@@ -271,7 +345,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Dinosaur Track</th>
+              <th scope="row">
+                <span class="en">Dinosaur Track</span>
+                <span class="de">Dino-Fußabdruck</span>
+              </th>
               <td><input type="checkbox" id="trackStandalone"></td>
               <td></td>
               <td></td>
@@ -287,7 +364,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Diplo</th>
+              <th scope="row">
+                <span class="en">Diplo</span>
+                <span class="de">Diplodocus</span>
+              </th>
               <td></td>
               <td><input type="checkbox" id="diploSkull"></td>
               <td><input type="checkbox" id="diploNeck"></td>
@@ -303,7 +383,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Dunkleosteus</th>
+              <th scope="row">
+                <span class="en">Dunkleosteus</span>
+                <span class="de">Dunkleosteus</span>
+              </th>
               <td><input type="checkbox" id="dunkStandalone"></td>
               <td></td>
               <td></td>
@@ -319,7 +402,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Eusthenopteron</th>
+              <th scope="row">
+                <span class="en">Eusthenopteron</span>
+                <span class="de">Eusthenopteron</span>
+              </th>
               <td><input type="checkbox" id="eusthenStandalone"></td>
               <td></td>
               <td></td>
@@ -335,7 +421,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Iguanadon</th>
+              <th scope="row">
+                <span class="en">Iguanodon</span>
+                <span class="de">Iguanodon</span>
+              </th>
               <td></td>
               <td><input type="checkbox" id="iguanSkull"></td>
               <td></td>
@@ -351,7 +440,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Juramaia</th>
+              <th scope="row">
+                <span class="en">Juramaia</span>
+                <span class="de">Juramaia</span>
+              </th>
               <td><input type="checkbox" id="juramStandalone"></td>
               <td></td>
               <td></td>
@@ -367,7 +459,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Mammoth</th>
+              <th scope="row">
+                <span class="en">Mammoth</span>
+                <span class="de">Mammut</span>
+              </th>
               <td></td>
               <td><input type="checkbox" id="mammoSkull"></td>
               <td></td>
@@ -383,7 +478,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Megacero</th>
+              <th scope="row">
+                <span class="en">Megacero</span>
+                <span class="de">Megacerops</span>
+              </th>
               <td></td>
               <td><input type="checkbox" id="megacSkull"></td>
               <td></td>
@@ -399,7 +497,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Megalo</th>
+              <th scope="row">
+                <span class="en">Megalo</span>
+                <span class="de">Reisenhirsch</span>
+              </th>
               <td></td>
               <td></td>
               <td></td>
@@ -415,7 +516,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Myllokunmingia</th>
+              <th scope="row">
+                <span class="en">Myllokunmingia</span>
+                <span class="de">Myllokunmingia</span>
+              </th>
               <td><input type="checkbox" id="mylloStandalone"></td>
               <td></td>
               <td></td>
@@ -431,7 +535,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Ophthalmo</th>
+              <th scope="row">
+                <span class="en">Opthalmo</span>
+                <span class="de">Ophthalmosaurus</span>
+              </th>
               <td></td>
               <td><input type="checkbox" id="ophthalSkull"></td>
               <td></td>
@@ -447,7 +554,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Pachy</th>
+              <th scope="row">
+                <span class="en">Pachy</span>
+                <span class="de">Pachysaurus</span>
+              </th>
               <td></td>
               <td><input type="checkbox" id="pachySkull"></td>
               <td></td>
@@ -463,7 +573,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Parasaur</th>
+              <th scope="row">
+                <span class="en">Parasaur</span>
+                <span class="de">Parasaurus</span>
+              </th>
               <td></td>
               <td><input type="checkbox" id="paraSkull"></td>
               <td></td>
@@ -479,7 +592,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Plesio</th>
+              <th scope="row">
+                <span class="en">Plesio</span>
+                <span class="de">Plesiosaurus</span>
+              </th>
               <td></td>
               <td><input type="checkbox" id="plesioSkull"></td>
               <td></td>
@@ -495,7 +611,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Ptera</th>
+              <th scope="row">
+                <span class="en">Ptera</span>
+                <span class="de">Pteranodon</span>
+              </th>
               <td></td>
               <td></td>
               <td></td>
@@ -511,7 +630,10 @@
               <td><input type="checkbox" id="rightPteraWing"></td>
             </tr>
             <tr>
-              <th scope="row">Quetzal</th>
+              <th scope="row">
+                <span class="en">Quetzal</span>
+                <span class="de">Quetzalcoatlus</span>
+              </th>
               <td></td>
               <td></td>
               <td></td>
@@ -527,7 +649,10 @@
               <td><input type="checkbox" id="rightQuetzalWing"></td>
             </tr>
             <tr>
-              <th scope="row">Sabertooth</th>
+              <th scope="row">
+                <span class="en">Sabertooth</span>
+                <span class="de">Säbelzahn</span>
+              </th>
               <td></td>
               <td><input type="checkbox" id="saberSkull"></td>
               <td></td>
@@ -543,7 +668,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Shark-tooth Pattern</th>
+              <th scope="row">
+                <span class="en">Shark-tooth Pattern</span>
+                <span class="de">Haizahnspirale</span>
+              </th>
               <td><input type="checkbox" id="sharkStandalone"></td>
               <td></td>
               <td></td>
@@ -559,7 +687,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Spino</th>
+              <th scope="row">
+                <span class="en">Spino</span>
+                <span class="de">Spinosaurus</span>
+              </th>
               <td></td>
               <td><input type="checkbox" id="spinoSkull"></td>
               <td></td>
@@ -575,7 +706,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Stego</th>
+              <th scope="row">
+                <span class="en">Stego</span>
+                <span class="de">Stegosaurus</span>
+              </th>
               <td></td>
               <td><input type="checkbox" id="stegoSkull"></td>
               <td></td>
@@ -591,7 +725,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">T-Rex</th>
+              <th scope="row">
+                <span class="en">T-Rex</span>
+                <span class="de">T-Rex</span>
+              </th>
               <td></td>
               <td><input type="checkbox" id="trexSkull"></td>
               <td></td>
@@ -607,7 +744,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Tricera</th>
+              <th scope="row">
+                <span class="en">Tricera</span>
+                <span class="de">Triceratops</span>
+              </th>
               <td></td>
               <td><input type="checkbox" id="tricSkull"></td>
               <td></td>
@@ -623,7 +763,10 @@
               <td></td>
             </tr>
             <tr>
-              <th scope="row">Trilobite</th>
+              <th scope="row">
+                <span class="en">Trilobite</span>
+                <span class="de">Trilobit</span>
+              </th>
               <td><input type="checkbox" id="triloStandalone"></td>
               <td></td>
               <td></td>
@@ -641,15 +784,44 @@
             <tr><th scope="row"></th></tr>
           </tbody>
         </table>
+        <div class="row">
+          <div class="col-8">
+            <select id="lang" class="form-control btn-light" style="border-radius: 15px;">
+              <option value="en">English</option>
+              <option value="de">Deutsch</option>
+            </select>
+          </div>
+          <div class="col-4">
+            <button class="resetBtn btn btn-light" onclick="resetDialogue();">
+              <span class="en">Reset Data</span>
+              <span class="de">Datenreset</span>
+            </button>
+          </div>
+        </div>
       </div>
       <div class="jumbotron" style="background-color: #7b6c53; color: white;">
         <div class="row">
           <div class="col">
-            <h2 class="finkfont">About</h1>
-            <p>This is a small <a class="about" href="https://github.com/samcarsonx/ac-fossilpedia">open-source</a> web applet I made to help keep track of the fossils you have and don't have in Animal Crossing: New Horizons. It uses jQuery and LocalStorage to handle the JavaScript and saving of data (remembering what checkboxes you've clicked).</p>
+            <h2 class="finkfont">
+                <span class="en">About</span>
+                <span class="de">Über</span>
+            </h2>
+            <p class="en">This is a small <a class="about" href="https://github.com/samcarsonx/ac-fossilpedia">open-source</a> web applet I made to help keep track of the fossils you have and don't have in Animal Crossing: New Horizons. It uses jQuery and LocalStorage to handle the JavaScript and saving of data (remembering what checkboxes you've clicked).</p>
+            <p class="de">Dies ist ein kleines <a class="about" href="https://github.com/samcarsonx/ac-fossilpedia">Open-Source</a>-Web-Applet, das ich erstellt habe, um den Überblick über die Fossilien zu behalten, die man in Animal Crossing: New Horizons hat und nicht hat. Es verwendet jQuery und LocalStorage, um das JavaScript zu verwalten und Daten zu speichern (wobei du dir merken musst, auf welche Kontrollkästchen du geklickt hast).</p>
             <br>
-            <h2 class="finkfont">The creator</h1>
-            <p>I'm Sam and I enjoy programming. Check out my <a class="about" href="https://samcarson.xyz">website</a> or <a class="about" href="https://github.com/samcarsonx">GitHub page</a>!</p>
+            <h2 class="finkfont">
+                <span class="en">The Creator</span>
+                <span class="de">Der Erschaffer</span>
+            </h2>
+            <p class="en">I'm Sam and I enjoy programming. Check out my <a class="about" href="https://samcarson.xyz">website</a> or <a class="about" href="https://github.com/samcarsonx">GitHub page</a>!</p>
+            <p class="de">Ich bin Sam und ich programmiere gerne. Schaue dir auch meine <a class="about" href="https://samcarson.xyz">Website</a> oder <a class="about" href="https://github.com/samcarsonx">GitHub-Seite</a> an!</p>
+            <br>
+            <h2 class="finkfont">
+                <span class="en">Localisation</span>
+                <span class="de">Lokalisierung</span>
+            </h2>
+            <p class="en">Special thanks to the following people for helping translate this site! You really helped me a lot.<br><b>Myself:</b> English<br><b>Asra:</b> German</p>
+            <p class="de">Besonderer Dank geht an diese Leute für ihre Hilfe beim Übersetzen! Du hast mir wirklich sehr geholfen.<br><b>Mich selber:</b> Englisch<br><b>Asra:</b> Deutsch</p>
           </div>
         </div>
       </div>
