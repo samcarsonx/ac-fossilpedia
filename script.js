@@ -29,10 +29,17 @@ var changeText = function(lang) {
 
   if(selectedLang == "de") {
     $(".de").show();
+    $(".es").hide();
+    $(".en").hide();
+  };
+  if(selectedLang == "es") {
+    $(".de").hide();
+    $(".es").show();
     $(".en").hide();
   };
   if(selectedLang == "en") {
     $(".de").hide();
+    $(".es").hide();
     $(".en").show();
   };
 
@@ -53,10 +60,11 @@ var reset = function() {
   localStorage.clear();
 };
 
-var resetText = "";
 var resetDialogue = function() {
+  var resetText = "";
   if (selectedLang == "en") { resetText = "Are you sure? This action cannot be undone." };
   if (selectedLang == "de") { resetText = "Bist du sicher? Diese Aktion kann nicht rückgängig gemacht werden." };
+  if (selectedLang == "es") { resetText = "¿Estás seguro? Esta acción no se puede deshacer." };
 
   if(confirm(resetText)) {
     reset();
