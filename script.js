@@ -27,21 +27,31 @@ var changeText = function(lang) {
   selectedLang = lang;
   $("select[id='lang']").val(selectedLang);
 
-  if(selectedLang == "de") {
+  if (selectedLang == "en") {
+    $(".en").show();
+    $(".de").hide();
+    $(".es").hide();
+    $(".fr").hide();
+  };
+  if (selectedLang == "de") {
+    $(".en").hide();
     $(".de").show();
     $(".es").hide();
-    $(".en").hide();
+    $(".fr").hide();
   };
-  if(selectedLang == "es") {
+  if (selectedLang == "es") {
+    $(".en").hide();
     $(".de").hide();
     $(".es").show();
-    $(".en").hide();
+    $(".fr").hide();
   };
-  if(selectedLang == "en") {
+  if (selectedLang == "fr") {
+    $(".en").hide();
     $(".de").hide();
     $(".es").hide();
-    $(".en").show();
+    $(".fr").show();
   };
+
 
   console.log(selectedLang);
 
@@ -65,6 +75,7 @@ var resetDialogue = function() {
   if (selectedLang == "en") { resetText = "Are you sure? This action cannot be undone." };
   if (selectedLang == "de") { resetText = "Bist du sicher? Diese Aktion kann nicht rückgängig gemacht werden." };
   if (selectedLang == "es") { resetText = "¿Estás seguro? Esta acción no se puede deshacer." };
+  if (selectedLang == "fr") { resetText = "Êtes-vous sûr? Cette action ne peut pas être annulée." };
 
   if(confirm(resetText)) {
     reset();
