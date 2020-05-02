@@ -69,15 +69,3 @@ var reset = function() {
   location.reload();
   localStorage.clear();
 };
-
-var resetDialogue = function() {
-  var resetText = "";
-  if (selectedLang == "en") { resetText = "Are you sure? This action cannot be undone." };
-  if (selectedLang == "de") { resetText = "Bist du sicher? Diese Aktion kann nicht rückgängig gemacht werden." };
-  if (selectedLang == "es") { resetText = "¿Estás seguro? Esta acción no se puede deshacer." };
-  if (selectedLang == "fr") { resetText = "Êtes-vous sûr? Cette action ne peut pas être annulée." };
-
-  if(confirm(resetText)) {
-    reset();
-  };
-};
