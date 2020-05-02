@@ -16,6 +16,8 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <script
       src="https://code.jquery.com/jquery-3.5.0.min.js"
       integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
@@ -908,7 +910,7 @@
             </select>
           </div>
           <div class="col-4">
-            <button class="resetBtn btn btn-light" onclick="resetDialogue();">
+            <button type="button" class="resetBtn btn btn-light" data-toggle="modal" data-target="#resetModal">
               <span class="en">Reset Data</span>
               <span class="de">Datenreset</span>
               <span class="es">Reiniciar Datos</span>
@@ -917,6 +919,49 @@
           </div>
         </div>
       </div>
+
+      <div class="modal fade" id="resetModal" tabindex="-1" role="dialog" aria-labelledby="resetModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="resetModalLabel">
+                <span class="en">Wait!</span>
+                <span class="de">Warten!</span>
+                <span class="es">¡Espere!</span>
+                <span class="fr">Attendre!</span>
+              </h5>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-9">
+                  <span class="en">Are you sure you want to clear the data? <br><b>This action cannot be undone.</b></span>
+                  <span class="de">Möchten Sie die Daten wirklich löschen? <br><b>Diese Aktion kann nicht rückgängig gemacht werden.</b></span>
+                  <span class="es">¿Estás seguro de que deseas borrar los datos? <br><b>Esta acción no se puede deshacer.</b></span>
+                  <span class="fr">Voulez-vous vraiment effacer les données? <br><b>Cette action ne peut pas être annulée.</b></span>
+                </div>
+                <div class="col-3" style="float: left; position: relative;">
+                  <img src="resetti.png" style="width: 100%;" />
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                <span class="en">Go back</span>
+                <span class="de">Zurückkehren</span>
+                <span class="es">Volver</span>
+                <span class="fr">Revenir</span>
+              </button>
+              <button type="button" class="btn btn-danger" onclick="reset();">
+                <span class="en">Reset Data</span>
+                <span class="de">Datenreset</span>
+                <span class="es">Reiniciar Datos</span>
+                <span class="fr">Réinitialiser</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <div class="jumbotron" style="background-color: #7b6c53; color: white;">
         <div class="row">
           <div class="col">
@@ -1000,7 +1045,7 @@
               <br><b>Dendrobyte:</b> Francés
             </p>
             <p class="fr">
-              Un merci spécial aux personnes suivantes pour avoir aidé à traduire ce site! Tu m'as vraiment beaucoup aidé.
+              Un merci spécial aux personnes suivantes pour avoir aidé à traduire ce site! Tu m'as aidé beaucoup.
               <br><b>Moi-même:</b> Anglais, Espagnol, Français
               <br><b>Asra:</b> Allemand
               <br><b>NateTheCarrot:</b> Espagnol

@@ -20,15 +20,15 @@ div.jumbotron {
 }
 
 table.table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-    background-color: #f8f8f0;
-    border-radius: 15px;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  background-color: #f8f8f0;
+  border-radius: 15px;
 }
 
 th {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 td {
@@ -43,6 +43,9 @@ thead th:nth-of-type(even){
 
 button.resetBtn {
   float: right;
+}
+
+button.btn {
   border-radius: 15px;
 }
 
@@ -74,4 +77,10 @@ a.titlelink:hover {
 }
 a.titlelink:active {
   color: #4c4409;
+}
+
+div .modal-content {
+  background-color: #f8f8f0;
+  border-radius: 25px;
+  border: 0px;
 }
